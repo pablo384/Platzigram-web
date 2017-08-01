@@ -14,5 +14,6 @@ angular.module("MyFirstApp", [])
 	];
 	$scope.agregarcomentario = function () {
 		$scope.comentarios.push($scope.nuevocomentario);
+		$scope.nuevocomentario={};
 	}
 });
