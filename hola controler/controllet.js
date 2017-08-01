@@ -1,8 +1,8 @@
 angular.module("MyFirstApp", [])
-.controller("FirstController", function ($scope) {
-	$scope.nombre="Pablo jajaja";
-	$scope.nuevocomentario={comentario:"hola mundo"};
-	$scope.comentarios=[
+.controller("FirstController", ["$scope","$http",function ($dato,$http) {
+	$dato.nombre="Pablo jajaja";
+	$dato.nuevocomentario={comentario:"hola mundo"};
+	$dato.comentarios=[
 		{
 			comentario:"Buen tuto",
 			username:"pablo384"
@@ -12,8 +12,8 @@ angular.module("MyFirstApp", [])
 			username:"lolo258"
 		}
 	];
-	$scope.agregarcomentario = function () {
-		$scope.comentarios.push($scope.nuevocomentario);
-		$scope.nuevocomentario={};
+	$dato.agregarcomentario = function () {
+		$dato.comentarios.push($dato.nuevocomentario);
+		$dato.nuevocomentario={};
 	}
-});
+}]);
