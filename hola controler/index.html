@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="MyFirstApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Probando AGJS</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="controllet.js"></script>
+    </head>
+    <body ng-controller="FirstController">
+
+    <input type="text" ng-model="nuevocomentario.comentario"><br>
+    <input type="text" ng-model="nuevocomentario.username"><br>
+    <button ng-click="agregarcomentario()"> Agregar comentario</button>
+        
+        <h3>Comentarios</h3>
+        <ul>
+        	<li ng-repeat="comentario in comentarios">
+        		{{comentario.comentario}}-<strong>{{comentario.username}}</strong>
+        	</li>
+        </ul>
+    </body>
+</html>
