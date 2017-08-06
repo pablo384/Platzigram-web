@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  // styleUrls: ['./heroes.component.css'],
+  styleUrls: ['./app.component.css'],
   // template: `
   //   <h1>{{title}}</h1>
   //   <a routerLink="/heroes">Heroes</a>
