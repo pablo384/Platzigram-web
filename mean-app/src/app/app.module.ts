@@ -2,9 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // Imports commented out for brevity
 import { RouterModule } from '@angular/router';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
+import { PostsService } from './posts.service';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
+
 
 // Define the routes
 const ROUTES = [
@@ -26,11 +30,11 @@ const ROUTES = [
   ],
   imports: [
     BrowserModule,
-    //FormsModule,
-    //HttpModule,
+    FormsModule,
+    HttpModule,
     RouterModule.forRoot(ROUTES) // Add routes to the app
   ],
-  providers: [],
+  providers: [PostsService],// Add the posts service
   bootstrap: [AppComponent]
 })
 export class AppModule { }
