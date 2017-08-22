@@ -16,6 +16,17 @@ var userSchema = mongoose.Schema({
 });
 var User = mongoose.model('users', userSchema);
 
+//--------MONGO CLIENT
+// var MongoClient = require('mongodb').MongoClient;
+
+// var uri = "mongodb://pablo384:2323@pruebas-shard-00-00-uiwkf.mongodb.net:27017,pruebas-shard-00-01-uiwkf.mongodb.net:27017,pruebas-shard-00-02-uiwkf.mongodb.net:27017/pruebas?ssl=true&replicaSet=pruebas-shard-0&authSource=admin";
+// MongoClient.connect(uri, function(err, db) {
+//   if (err!=null) {
+//     console.log('--------Conectado con MONGO---');
+//   }
+//   db.close();
+// });
+
 
 
 
